@@ -54,60 +54,8 @@ mvn test
 
 ---
 
-## ⚙️ Key Features
-
-### ✔ Auto Wait Handling
-
-Uses Playwright's built-in waiting mechanisms:
-
-* `waitForSelector`
-* `waitForLoadState`
-
----
-
-### ✔ Price Validation Logic
-
-* Removes unwanted characters (`₹`, `,`, etc.)
-* Uses `BigDecimal` for accurate price handling
-
----
-
-### ✔ Multi-Tab Handling
-
-Uses:
-
-```java
-page.waitForPopup()
-```
-
----
-
-### ✔ Assertions
-
-* Cart subtotal validation
-* Product visibility
-* Quantity validation
-
----
-
-## 🧹 Cleanup
-
-Browser is closed after test execution using:
-
-```java
-@AfterTest
-```
-
----
-
 ## 📌 Author
 
 Akash Negi
 
----
-
-## 💡 Notes
-
-* Test runs in **headed mode** (`headless = false`)
-* Make sure browser launches properly before execution
 
