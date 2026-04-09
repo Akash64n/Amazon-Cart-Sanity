@@ -36,9 +36,6 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-m2
 
-      - name: Build project
-        run: mvn -B clean package -DskipTests
-
       - name: Install Playwright Browsers
         run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
