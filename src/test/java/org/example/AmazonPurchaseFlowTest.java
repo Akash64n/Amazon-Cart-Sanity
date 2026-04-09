@@ -26,7 +26,7 @@ public class AmazonPurchaseFlowTest {
     @Test
     public void AmazonSanityFlow() {
         page.navigate("https://amazon.in");
-        page.waitForCondition(() -> page.locator("//input[@id='twotabsearchtextbox']").isVisible());
+        page.waitForSelector("//input[@id='twotabsearchtextbox']");
         page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search Amazon.in")).fill("HP smart tank");
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Go").setExact(true)).click();
         page.waitForSelector("//div[@role='listitem']//*[contains(text(),'Smart Tank 589')]");
